@@ -45,11 +45,14 @@ function gradeQuiz(candidateAnswers) {
     let gradeTotal = grade + 1;
     let gradePercent = (gradeTotal/candidateAnswers.length)*100;
     console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${candidateAnswers.length} answers correct)`);
+    if (gradeTotal > 3){
+    console.log("Status: Passed");
+    } else if (gradeTotal <= 3) {
+    console.log("Status: Failed");
+     }
     }
   }
 } 
-
-
 /* // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 function askQuestion(candidateAnswer) {
   console.log(question);
