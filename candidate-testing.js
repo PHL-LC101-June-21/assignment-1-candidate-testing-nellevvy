@@ -24,20 +24,30 @@ for (let i = 0; i < questions.length; i++){
 }
 
 for (let i = 0; i < candidateAnswers.length; i++){
-  console.log(`You answered ${candidateAnswers[i]} and the correct answer is ${correctAnswers[i]}`);
+  console.log(`The Question: ${questions[i]} \n Your answer: ${candidateAnswers[i]} \n Correct Answer: ${correctAnswers[i]}`);
 }
 
  // TODO 1.1c: Ask for candidate's name //
 function runProgram() {
   askForName(candidateName);
   askQuestions();
-  //gradeQuiz(this.candidateAnswers);
+  gradeQuiz(this.candidateAnswers);
 }
 
 function askQuestions(candidateAnswers) {
   
 }
 
+let grade = 0;
+function gradeQuiz(candidateAnswers) {
+  for (let i = 0; i < candidateAnswers.length; i++){
+    if ((candidateAnswers[i]) = (correctAnswers[i])){
+    let gradeTotal = grade + 1;
+    let gradePercent = (gradeTotal/candidateAnswers.length)*100;
+    console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${candidateAnswers.length} answers correct)`);
+    }
+  }
+} 
 
 
 /* // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
@@ -50,15 +60,6 @@ function askQuestions(questions) {
   console.log(questions[i]);
 }
 }
-
-function gradeQuiz(candidateAnswers) {
-  let grade;
-  if candidateAnswers[0] === correctAnswers [0]{
-    console.log("Correct");
-  } else if candidateAnswers [0] != correctAnswers [0] {
-    console.log("Incorrect");
-  }
-} 
 // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
 function gradeQuiz(candidateAnswers) {
   let grade; 
@@ -80,6 +81,6 @@ module.exports = {
   questions: questions,
   correctAnswers: correctAnswers,
   candidateAnswers: candidateAnswers,
-  //gradeQuiz: gradeQuiz,
+  gradeQuiz: gradeQuiz,
   runProgram: runProgram
 };
