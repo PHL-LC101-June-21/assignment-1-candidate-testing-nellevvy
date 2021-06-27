@@ -12,7 +12,7 @@ let candidateAnswers = [];
 
 let questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ","What is the minimum crew size for the ISS? "];
 
-let correctAnswers = ["Sally Ride", "true", "40","Trajectory", "3"]
+let correctAnswers = ["sally ride", "true", "40","trajectory", "3"]
 
  // TODO 1.1b: Ask for candidate's name //
 function askForName(candidateName) {
@@ -27,6 +27,19 @@ for (let i = 0; i < candidateAnswers.length; i++){
   console.log(`The Question: ${questions[i]} \n Your answer: ${candidateAnswers[i]} \n Correct Answer: ${correctAnswers[i]}`);
 }
 
+let grade = 0;
+let gradeTotal = 0;
+let gradePercent;
+
+function gradeQuiz(candidateAnswers){
+  for (i=0; i< candidateAnswers.length; i++){
+    if ((candidateAnswers[i]) === (correctAnswers[i])){
+      gradeTotal =+ (gradeTotal + 1);
+    }
+  }
+  console.log(gradeTotal);
+}
+
  // TODO 1.1c: Ask for candidate's name //
 function runProgram() {
   askForName(candidateName);
@@ -38,21 +51,22 @@ function askQuestions(candidateAnswers) {
   
 }
 
-let grade = 0;
-function gradeQuiz(candidateAnswers) {
+
+/*function gradeQuiz(candidateAnswers) {
   for (let i = 0; i < candidateAnswers.length; i++){
-    if ((candidateAnswers[i]) = (correctAnswers[i])){
-    let gradeTotal = grade + 1;
-    let gradePercent = (gradeTotal/candidateAnswers.length)*100;
+    if ((candidateAnswers[i].toLowerCase) === (correctAnswers[i])){
+    console.log("Yes");
+    } 
+     let gradePercent = (gradeTotal/candidateAnswers.length)*100;
     console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${candidateAnswers.length} answers correct)`);
+  } 
     if (gradeTotal > 3){
     console.log("Status: Passed");
     } else if (gradeTotal <= 3) {
     console.log("Status: Failed");
-     }
-    }
   }
-} 
+}*\
+
 /* // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 function askQuestion(candidateAnswer) {
   console.log(question);
