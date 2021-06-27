@@ -37,8 +37,16 @@ function gradeQuiz(candidateAnswers){
       gradeTotal =+ (gradeTotal + 1);
     }
   }
-  console.log(gradeTotal);
+   let gradePercent = (gradeTotal/candidateAnswers.length)*100;
+    console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${candidateAnswers.length} answers correct)`);
+    if (gradeTotal > 3){
+    console.log("Status: Passed");
+    } else if (gradeTotal <= 3) {
+    console.log("Status: Failed");
+    }
 }
+
+
 
  // TODO 1.1c: Ask for candidate's name //
 function runProgram() {
@@ -50,22 +58,6 @@ function runProgram() {
 function askQuestions(candidateAnswers) {
   
 }
-
-
-/*function gradeQuiz(candidateAnswers) {
-  for (let i = 0; i < candidateAnswers.length; i++){
-    if ((candidateAnswers[i].toLowerCase) === (correctAnswers[i])){
-    console.log("Yes");
-    } 
-     let gradePercent = (gradeTotal/candidateAnswers.length)*100;
-    console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${candidateAnswers.length} answers correct)`);
-  } 
-    if (gradeTotal > 3){
-    console.log("Status: Passed");
-    } else if (gradeTotal <= 3) {
-    console.log("Status: Failed");
-  }
-}*\
 
 /* // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 function askQuestion(candidateAnswer) {
