@@ -59,9 +59,9 @@ function gradeQuiz(candidateAnswers){
       gradeTotal = (gradeTotal + 1);
     }
   }
-   let gradePercent = (gradeTotal/candidateAnswers.length)*100;
+   let gradePercent = (gradeTotal/questions.length)*100;
   
-    console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${candidateAnswers.length} answers correct)`);
+    console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${questions.length} answers correct)`);
     if (gradeTotal > 3){
     console.log("Status: Passed");
     } else if (gradeTotal <= 3) {
