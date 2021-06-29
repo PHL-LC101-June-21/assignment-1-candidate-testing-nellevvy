@@ -67,6 +67,7 @@ function gradeQuiz(candidateAnswers){
     } else if (gradeTotal <= 3) {
     console.log("Status: Failed");
     }
+    return gradePercent;
 }
 
 
