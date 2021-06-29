@@ -58,14 +58,14 @@ function gradeQuiz(candidateAnswers){
       gradeTotal = (gradeTotal + 1);
     }
   }
-   let gradePercent = (gradeTotal/questions.length)*100;
+  let gradePercent = (gradeTotal/questions.length)*100;
    console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${questions.length} answers correct)`);
    if (gradeTotal > 3){
     console.log("Status: Passed");
     } else if (gradeTotal <= 3) {
     console.log("Status: Failed");
-    }
-    return gradePercent;
+   }
+  return gradeQuiz;
 }
 
  // TODO 1.1c: Ask for candidate's name //
