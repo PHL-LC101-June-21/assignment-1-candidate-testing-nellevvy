@@ -13,7 +13,7 @@ let question;
 
 let questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ","What is the minimum crew size for the ISS? "];
 
-let correctAnswers = ["sally ride", "true", "40","trajectory", "3"]
+let correctAnswers = ["sally ride", "true", "40","trajectory", "3"];
 
  // TODO 1.1b: Ask for candidate's name //
 function askForName(candidateName) {
@@ -38,7 +38,7 @@ function gradeQuestion(candidateAnswer) {
 function askQuestions(questions) {
   for (let i=0; i<questions.length; i++){
   console.log(questions[i]);
-}
+ }
 }
 
 for (let i = 0; i < questions.length; i++){
@@ -48,7 +48,6 @@ for (let i = 0; i < questions.length; i++){
 for (let i = 0; i < candidateAnswers.length; i++){
   console.log(`The Question: ${questions[i]} \n Your answer: ${candidateAnswers[i]} \n Correct Answer: ${correctAnswers[i]}`);
 }
-
 
 let gradeTotal = 0;
 let gradePercent;
@@ -60,17 +59,14 @@ function gradeQuiz(candidateAnswers){
     }
   }
    let gradePercent = (gradeTotal/questions.length)*100;
-  
-    console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${questions.length} answers correct)`);
-    if (gradeTotal > 3){
+   console.log(`Overall Grade: ${gradePercent}% (${gradeTotal} out of ${questions.length} answers correct)`);
+   if (gradeTotal > 3){
     console.log("Status: Passed");
     } else if (gradeTotal <= 3) {
     console.log("Status: Failed");
     }
     return gradePercent;
 }
-
-
 
  // TODO 1.1c: Ask for candidate's name //
 function runProgram() {
